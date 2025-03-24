@@ -1,0 +1,17 @@
+[project]
+name = "nyc"
+version = "0.1.0"
+description = "Demo Prj inspired by Dagster University"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "dagster>=1.10.2",
+    "dagster-duckdb>=0.26.2",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.ruff]
+extend = "../pyproject.toml"

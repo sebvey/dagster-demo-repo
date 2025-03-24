@@ -1,0 +1,18 @@
+[project]
+name = "basics"
+version = "0.1.0"
+description = "Dagster Basics"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "dagster>=1.10.2",
+    "dagster-duckdb>=0.26.2",
+    "dagster-duckdb-polars>=0.26.2",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.ruff]
+extend = "../pyproject.toml"

@@ -1,0 +1,22 @@
+[project]
+name = "dagster-manager"
+version = "0.1.0"
+description = "Dagster Infrastructure"
+readme = "README.md"
+requires-python = "~=3.12"
+
+# TODO - LOCK DEPS TO MINOR ?
+dependencies = [
+    "dagster>=1.10.5",
+    "dagster-docker>=0.26.5",
+    "dagster-postgres>=0.26.5",
+    "dagster-graphql>=1.10.5",
+    "dagster-webserver>=1.10.5",
+]
+
+# WHY:
+# - dagster           <- the basics
+# - dagster-webserver <- dagit UI
+# - dagster-docker    <- DockRunLauncher
+# - dagster-graphql   <- graphQL 'handler'
+# - dagster-postgres  <- PostgresRunStorage / PostgresScheduleStorage / PostgresEventLogStorage

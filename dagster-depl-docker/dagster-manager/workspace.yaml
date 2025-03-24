@@ -1,0 +1,5 @@
+load_from:
+  - grpc_server:
+      host: demo_code_location_server
+      port: 4000
+      location_name: "demo_code_location"

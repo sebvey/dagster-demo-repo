@@ -1,0 +1,30 @@
+[project]
+name = "demo-code-location"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Sebastien VEY", email = "sebvey@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "dagster>=1.10.5",
+    "dagster-docker>=0.26.5",
+    "dagster-postgres>=0.26.5",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+#### DEVELOPMENT STUFFS ##################################
+
+[dependency-groups]
+dev = [
+    "dagster-webserver>=1.10.5",
+]
+
+[tool.dagster]
+modules = [
+    { type = "module", name = "demo_code_location" },
+]
