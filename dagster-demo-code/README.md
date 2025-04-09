@@ -105,12 +105,14 @@ Checks simple :
 - peuvent être bloquant
 
 ## Code Version
+
 On peux définir une version de code à notre asset. Cette version de code sera associé au matérialisation.
 Quand l'asset change de version, les matérialisations passent en async.
 
 Si non défini, chaque run produit une version de code différente.
 
 ## Data version
+
 Une version de donnée est associé à chaque matérialisation. Par défaut, c'est un hash de la version de code
 et des versions des données dont il dépend.
 On a la possibilité si nécessaire de calculer à la main la version de code
@@ -125,3 +127,4 @@ Possibilité de partitionner les assets : l'asset est divisé en partitions. De 
 
 dagster dev :
 - 
+

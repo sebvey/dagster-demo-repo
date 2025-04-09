@@ -15,7 +15,7 @@ partitions_def = dg.MultiPartitionsDefinition(
 @dg.asset(partitions_def=partitions_def)
 def asset_partitioned_A(context: dg.AssetExecutionContext) -> None:
 
-    context.log.info(f"Materializeing {context.partition_key}")
+    context.log.info(f"Materializing {context.partition_key}")
     context.log.info(f"{context.partition_key.keys_by_dimension=}")
 
 
