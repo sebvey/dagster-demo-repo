@@ -1,6 +1,6 @@
 # ASSETS AND MATERIALIZATION
 
-Développement autour du concept d'asset
+Développement autour du concept d'asset.  
 asset = 'entité persistante' qui capture une compréhension du monde
 eg: un fichier, un répertoire , une table, modèle ML ...
 
@@ -8,27 +8,29 @@ eg: un fichier, un répertoire , une table, modèle ML ...
 -> On ne développe pas des tasks (faire quelque chose) mais des assets
 -> dans des modules pythons - un module python = une code location (eg. sous projet)
 
-ASSET =
-- un ensemble de caractéristiques:
-    - nom, description, metadata, tags ...
-    - un ensemble de dépendances (assets)
-    - un partitionnement (une clé est un sous ensemble qui peut être matérialisé indépendamment)
-    - ... (pas mal d'autres choses qui vont structurer les interactions avec l'asset)
-- une fonction python qui permet la matérialisation de l'asset
+## ASSET
+un ensemble de caractéristiques:
+- nom, description, metadata, tags ...
+- un ensemble de dépendances (assets)
+- un partitionnement (une clé est un sous ensemble qui peut être matérialisé indépendamment)
+- ... (pas mal d'autres choses qui vont structurer les interactions avec l'asset)
 
-DAG
+une fonction python qui permet la matérialisation de l'asset
+
+@
+
+## DAG
 La définition des assets et de leurs dépendances permettent de définir un DAG
 
+## MATERIALISATION
 
-MATERIALISATION
-
-**Asset Jobs**
+### Asset Jobs
 - Manière 'historique'.
 - Définition d'asset jobs. Ensemble d'assets comme cible.
 - Un job run va matérialiser les assets dans l'ordre en fonction des dépendances
 - Trigger: manual / schedules / sensors
 
-**Declarative Automation**
+### Declarative Automation
 On défini des conditions sur l'asset. Quand celle-ci sont remplies, l'asset est matérialisé
 Conditions fonction de : état de l'asset - état de ses dépendances - temporel
 
@@ -42,7 +44,7 @@ exemples:
 
 https://docs.dagster.io/guides/automate/declarative-automation/#automation-conditions
 
-**UI**
+### UI
 - par asset
 - upstream, downstream d'un asset
 - en lançant des jobs
@@ -56,7 +58,7 @@ Les fonctions de matérialisations peuvent être utilisées avec plusieurs 'phil
 ## IO MANAGERS
 
 Se prête bien au pattern suivant:
-- lecture in-memory des dépendances
+- lecture des dépendances in-memory
 - transformation in-memory
 - écriture vers un datastore
 
@@ -83,9 +85,6 @@ Equivalence GCP
 Snowflake - execution de requete sur les warehouse
 Databricks
 Pleins d'autres
-
-
-
 
 
 ## METADATA

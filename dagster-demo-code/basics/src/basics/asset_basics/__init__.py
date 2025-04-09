@@ -3,7 +3,7 @@ from dagster_duckdb_polars import DuckDBPolarsIOManager
 
 
 from . import assets, asset_checks
-from .asset_jobs import gold_AB_job, gold_AR_job
+from .asset_jobs import upstream_job, selection_job
 
 # MODULE DEFINITION
 
@@ -13,7 +13,7 @@ from .asset_jobs import gold_AB_job, gold_AR_job
 
 location_assets = dg.load_assets_from_modules([assets])
 location_asset_checks = dg.load_asset_checks_from_modules([asset_checks])
-location_jobs = [gold_AR_job,gold_AB_job]
+location_jobs = [selection_job, upstream_job]
 
 
 defs = dg.Definitions(
